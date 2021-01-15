@@ -1,0 +1,563 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"td",
+				"td>@fat</td\tabc"
+			],
+			[
+				"a",
+				"a\tEmmet"
+			],
+			[
+				"backgr",
+				"background-color\tproperty"
+			],
+			[
+				"paddin",
+				"padding-top\tproperty"
+			],
+			[
+				"align",
+				"text-align\tproperty"
+			],
+			[
+				"div",
+				"div\tEmmet"
+			],
+			[
+				"bol",
+				"bolder\tfont-weight"
+			],
+			[
+				"back",
+				"background-color\tproperty"
+			],
+			[
+				"colo",
+				"background-color\tproperty"
+			],
+			[
+				"bac",
+				"background-color\tproperty"
+			],
+			[
+				"html",
+				"html\thtml"
+			],
+			[
+				"footer",
+				"footer\tEmmet"
+			],
+			[
+				"li",
+				"li\tEmmet"
+			],
+			[
+				"player",
+				"playerTwoDiceValue\tabc"
+			],
+			[
+				"images",
+				"images/dice6.png"
+			],
+			[
+				"im",
+				"images/dice6.png"
+			],
+			[
+				"if",
+				"if\tIf Condition"
+			],
+			[
+				"Da",
+				"Day1"
+			],
+			[
+				"Day",
+				"Day1"
+			],
+			[
+				"day",
+				"Day1"
+			],
+			[
+				"pri",
+				"print\tkeyword"
+			],
+			[
+				"unore",
+				"I-unordered_map\tinc"
+			],
+			[
+				"for",
+				"for\tFor Loop"
+			],
+			[
+				"begin",
+				"beginend\t$1.begin(), $1.end()"
+			],
+			[
+				"push",
+				"push_back\tfunc"
+			],
+			[
+				"pus",
+				"push_back\tfunc"
+			],
+			[
+				"vect",
+				"I-vector\tinc"
+			],
+			[
+				"pop",
+				"pop_back\tfunc"
+			],
+			[
+				"puch",
+				"push_back\tfunc"
+			],
+			[
+				"beg",
+				"beginend\t$1.begin(), $1.end()"
+			],
+			[
+				"tasks-",
+				"tasks-monokai"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 3264,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "style.css",
+			"settings":
+			{
+				"buffer_size": 285,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"list pa",
+				"Package Control: List Packages"
+			],
+			[
+				"insat",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"emmet",
+				"Emmet: Decrement Number by 0.1"
+			],
+			[
+				"pac",
+				"Package Control: Remove Repository"
+			],
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"color",
+				"UI: Select Color Scheme"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"colo",
+				"UI: Select Color Scheme"
+			],
+			[
+				"packag",
+				"Package Control: List Packages"
+			],
+			[
+				"task",
+				"Tasks: Complete"
+			],
+			[
+				"tas",
+				"Tasks: New"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Remove Package"
+			],
+			[
+				"note",
+				"Notes: New…"
+			],
+			[
+				"word",
+				"Word Wrap: Toggle"
+			],
+			[
+				"keyb",
+				"Preferences: Key Bindings"
+			],
+			[
+				"the",
+				"UI: Select Theme"
+			],
+			[
+				"insa",
+				"Package Control: Install Package"
+			],
+			[
+				"thme",
+				"UI: Select Theme"
+			],
+			[
+				"key",
+				"Preferences: Key Bindings"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 204.0,
+		"history":
+		[
+			"stop",
+			"ls"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/E/Coding/Bug-Tracker"
+	],
+	"file_history":
+	[
+		"/E/Coding/Bug-Tracker/index.html",
+		"/E/Coding/Bug-Tracker/Report.html",
+		"/E/Coding/Bug-Tracker/.gitignore",
+		"/E/Coding/Bug-Tracker/README.md",
+		"/E/Coding/WebDevelopment/MiniWebProjects/index.html",
+		"/E/Coding/Web Development/MiniWebProjects/Tindog/inde.html",
+		"/E/Coding/Web Development/MiniWebProjects/Bootstrap/index.html",
+		"/E/Coding/Web Development/MiniWebProjects/index.html",
+		"/E/Coding/Web Development/MiniWebProjects/Dice-Game/index.js",
+		"/E/Coding/Web Development/MiniWebProjects/Dice-Game/dicee.html",
+		"/E/Coding/Web Development/Dice-Game/index.js",
+		"/E/Coding/Web Development/Dice-Game/dicee.html",
+		"/E/Coding/Web Development/Dice-Game/styles.css",
+		"/E/Coding/Webiste Full/DOM/Dice Challenge/index.js",
+		"/E/Coding/Web Development/Dice-Game/README.md",
+		"/E/Coding/100DaysOfCode-Python/Day5/addingEvenNumbers.py",
+		"/E/Coding/100DaysOfCode-Python/Day5/highestScoreInClass.py",
+		"/E/Coding/100DaysOfCode-Python/Day5/averageHeightOfStudents.py",
+		"/E/Coding/100DaysOfCode-Python/Day2/billSplitAndTipCalculator.py",
+		"/E/Coding/100DaysOfCode-Python/Day4/rockPaperScissor.py",
+		"/E/Coding/100DaysOfCode-Python/Day4/whosPaying.py",
+		"/E/Coding/100DaysOfCode-Python/Day4/headsOrTails.py",
+		"/E/Coding/100DaysOfCode-Python/Day3/treasureIsland.py",
+		"/E/Coding/100DaysOfCode-Python/Day3/leapYear.py",
+		"/E/Coding/100DaysOfCode-Python/Day3/loveCalculator.py",
+		"/E/Coding/100DaysOfCode-Python/Day3/bmi2.py",
+		"/E/Coding/100DaysOfCode-Python/Day3/pizzaOrder.py",
+		"/E/Coding/100DaysOfCode-Python/Day2/bmi.py",
+		"/E/Coding/100DaysOfCode-Python/Day2/sumOfDigitsInTwoDigitNumber.py",
+		"/E/Coding/100DaysOfCode-Python/Day1/printingAndInput.py",
+		"/E/Coding/100DaysOfCode-Python/Day1/bandNameGenerator.py",
+		"/E/Coding/100DaysOfCode-Python/Day1/variables.py",
+		"/E/Coding/100DaysOfCode-Python/Day1/day1.py",
+		"/E/Coding/100DaysOfCode-Python/.gitignore",
+		"/C/Users/Nikhil/Desktop/cplusplus/tasks.todo",
+		"/C/Users/Nikhil/Desktop/cplusplus/set.cpp",
+		"/C/Users/Nikhil/Desktop/cplusplus/vector.cpp",
+		"/C/Users/Nikhil/Desktop/cplusplus/firstAndLastElementInArray.cpp",
+		"/C/Users/Nikhil/Desktop/cplusplus/array.cpp",
+		"/C/Users/Nikhil/AppData/Roaming/Sublime Text 3/Packages/PlainTasks/PlainTasks (Windows).sublime-settings",
+		"/C/Users/Nikhil/AppData/Roaming/Sublime Text 3/Packages/User/PlainTasks.sublime-settings",
+		"/C/Users/Nikhil/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/Nikhil/AppData/Roaming/Sublime Text 3/Packages/PlainTasks/messages/Tutorial.todo",
+		"/C/Users/Nikhil/Desktop/cplusplus/To-Do.txt",
+		"/C/Users/Nikhil/Dropbox/Notes/To Do list.note",
+		"/C/Users/Nikhil/Desktop/cplusplus/To-Do.md",
+		"/C/Users/Nikhil/Desktop/cplusplus/hello.cpp",
+		"/C/Users/Nikhil/Desktop/cplusplus/template.txt",
+		"/E/Coding/Web Development/Tindog/index.html",
+		"/E/Coding/hello.cpp",
+		"/E/Coding/Web Development/Tindog/app.js",
+		"/C/Users/Nikhil/AppData/Roaming/Sublime Text 3/Packages/CMD/cmd.py"
+	],
+	"find":
+	{
+		"height": 33.0
+	},
+	"find_in_files":
+	{
+		"height": 138.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"navbarTogglerDemo02",
+			"27",
+			"Mark",
+			"mdo"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3264,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								631,
+								631
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"file": "style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 285,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								258,
+								271
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 33.0
+	},
+	"input":
+	{
+		"height": 52.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.696887001465,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 249.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "bug-tracker.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 154.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 3
+	}
+}

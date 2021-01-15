@@ -1,0 +1,24 @@
+body {
+	font-family: "Montserrat";
+	color: #f8f1f1;
+}
+
+/*Navigation Bar*/
+#navigation-bar {
+	background-color: #11698e;
+}
+
+.navbar-brand {
+	font-family: "Ubuntu";
+	font-size: 2.5rem;
+	font-weight: bold;
+}
+
+.nav-item {
+	padding: 0 3px;
+	font-size: 1.2rem;
+}
+
+#Dashboard {
+	padding: 5%
+}
