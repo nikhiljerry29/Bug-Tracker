@@ -132,10 +132,29 @@
 	"buffers":
 	[
 		{
+			"file": "Schema/schema.sql",
+			"settings":
+			{
+				"buffer_size": 1094,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": ".gitignore",
+			"settings":
+			{
+				"buffer_size": 1666,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 3264,
+				"buffer_size": 3258,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -143,7 +162,7 @@
 			"file": "style.css",
 			"settings":
 			{
-				"buffer_size": 285,
+				"buffer_size": 287,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -193,6 +212,14 @@
 		"selected_items":
 		[
 			[
+				"colo",
+				"UI: Select Color Scheme"
+			],
+			[
+				"them",
+				"UI: Select Theme"
+			],
+			[
 				"list pa",
 				"Package Control: List Packages"
 			],
@@ -227,10 +254,6 @@
 			[
 				"install",
 				"Package Control: Install Package"
-			],
-			[
-				"colo",
-				"UI: Select Color Scheme"
 			],
 			[
 				"packag",
@@ -303,10 +326,12 @@
 	},
 	"expanded_folders":
 	[
-		"/E/Coding/Bug-Tracker"
+		"/E/Coding/Bug-Tracker",
+		"/E/Coding/Bug-Tracker/Schema"
 	],
 	"file_history":
 	[
+		"/E/Coding/Bug-Tracker/bug-tracker.sublime-project",
 		"/E/Coding/Bug-Tracker/index.html",
 		"/E/Coding/Bug-Tracker/Report.html",
 		"/E/Coding/Bug-Tracker/.gitignore",
@@ -376,6 +401,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"type1",
 			"navbarTogglerDemo02",
 			"27",
 			"Mark",
@@ -402,24 +428,24 @@
 			[
 				{
 					"buffer": 0,
-					"file": "index.html",
+					"file": "Schema/schema.sql",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3264,
+						"buffer_size": 1094,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								631,
-								631
+								1094,
+								1094
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"syntax": "Packages/SQL/SQL.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
@@ -427,6 +453,34 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": ".gitignore",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1666,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								32,
+								32
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Git Formats/Git Ignore.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -436,20 +490,55 @@
 			"sheets":
 			[
 				{
-					"buffer": 1,
-					"file": "style.css",
+					"buffer": 2,
+					"file": "index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 285,
+						"buffer_size": 3258,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								258,
-								271
+								1040,
+								973
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 660.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 3,
+					"file": "style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 287,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								287,
+								287
 							]
 						],
 						"settings":
@@ -460,7 +549,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -489,12 +578,19 @@
 				0,
 				2,
 				1
+			],
+			[
+				2,
+				0,
+				3,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.696887001465,
+			0.322072474433,
+			0.718528673197,
 			1.0
 		],
 		"rows":
@@ -554,7 +650,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 154.0,
+	"side_bar_width": 205.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
