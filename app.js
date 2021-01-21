@@ -1,17 +1,34 @@
 const express = require("express");
-const bodyParser = require("body-parser");
-
 const app = express();
-let data = require(__dirname + "/data");
+app.use(express.static("public"));
+
+const bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({extended: true}));
+
+const date = require(__dirname + "/date.js");
+const sqlConnection = require(__dirname + "/sqlConnection.js");
+
+
+const mysql = require("mysql");
+let connection = mysql.createConnection(sqlConnection.credentialDetails)
+
+connection.connect();
+
+let data = [];
+
+connection.query('SELECT * FROM PRODUCT_LOG', function (error, results, fields) {
+	if (error) throw error;
+	data = results;
+});
+
+connection.end();
 
 app.set("view engine", "ejs");
 
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static("public"));
-
 app.get("/", function(req, res){
 	res.render("dashboardAdmin", {
-		dashboardAdminData : data.dashboardData
+		dashboardAdminData : data,
+		date : date
 	});
 });
 

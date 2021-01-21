@@ -22,10 +22,10 @@
 					<tr>
 						<th scope="row"><%= dashboardAdminData[i]["tickets"] %></th>
 						<td><%= dashboardAdminData[i]["status"] %></td>
-						<td><%= dashboardAdminData[i]["projectId"] %></td>
+						<td><%= dashboardAdminData[i]["project_id"] %></td>
 						<td><%= dashboardAdminData[i]["priority"] %></td>
-						<td><%= dashboardAdminData[i]["openedDate"] %></td>
-						<td><%= dashboardAdminData[i]["closedDate"] %></td>
+						<td><%= date.getDate(dashboardAdminData[i]["opened_on"]) %></td>
+						<td><%= date.getDate(dashboardAdminData[i]["closed_on"]) %></td>
 					</tr>
 					<% } %>
 				</tbody>

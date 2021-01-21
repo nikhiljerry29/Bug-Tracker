@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"CLOSED",
+				"closed_on"
+			],
+			[
+				"OPENED",
+				"opened_on"
+			],
+			[
+				"dahs",
+				"dashboardData\t(data.js)"
+			],
+			[
+				"opene",
+				"openedDate\t(app.js)"
+			],
+			[
+				"da",
+				"dashboardData\tabc"
+			],
+			[
+				"dashbo",
+				"dashboardData\t(data.js)"
+			],
+			[
+				"bod",
+				"bodyParser\tabc"
+			],
+			[
 				"td",
 				"td>@fat</td\tabc"
 			],
@@ -132,37 +160,30 @@
 	"buffers":
 	[
 		{
+			"contents": "const express = require(\"express\");\nconst bodyParser = require(\"body-parser\");\n\nconst app = express();\nlet data = require(__dirname + \"/data\");\n\nconst mysql = require(\"mysql\");\nlet connection = mysql.createConnection({\n\thost: 'localhost',\n\tuser: 'root',\n\tpassword: '',\n\tdatabase: 'bugtracker'\n})\n\nconnection.connect(function(error){\n\tif(!!error)\n\t\tconsole.log(\"Error\");\n\telse\n\t\tconsole.log(\"Connected\");\n\n})\n\napp.set(\"view engine\", \"ejs\");\n\napp.use(bodyParser.urlencoded({extended: true}));\napp.use(express.static(\"public\"));\n\napp.get(\"/\", function(req, res){\n\tres.render(\"dashboardAdmin\", {\n\t\tdashboardAdminData : data.dashboardData\n\t});\n});\n\nconst port = 8080;\napp.listen(port, function() {\n\tconsole.log('Server started on port :: ' + port);\n\tconsole.log('localhost:' + port);\n});\n\n",
+			"file": "app.js",
+			"file_size": 821,
+			"file_write_time": 132557179022613538,
+			"settings":
+			{
+				"buffer_size": 784,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "Schema/schema.sql",
 			"settings":
 			{
-				"buffer_size": 1094,
+				"buffer_size": 2948,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": ".gitignore",
+			"file": "views/dashboardAdmin.ejs",
 			"settings":
 			{
-				"buffer_size": 1666,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 3258,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "style.css",
-			"settings":
-			{
-				"buffer_size": 287,
+				"buffer_size": 1084,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -216,6 +237,14 @@
 				"UI: Select Color Scheme"
 			],
 			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"color",
+				"UI: Select Color Scheme"
+			],
+			[
 				"them",
 				"UI: Select Theme"
 			],
@@ -232,10 +261,6 @@
 				"Package Control: Remove Package"
 			],
 			[
-				"insta",
-				"Package Control: Install Package"
-			],
-			[
 				"emmet",
 				"Emmet: Decrement Number by 0.1"
 			],
@@ -246,10 +271,6 @@
 			[
 				"package",
 				"Package Control: List Packages"
-			],
-			[
-				"color",
-				"UI: Select Color Scheme"
 			],
 			[
 				"install",
@@ -324,17 +345,24 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/E/Coding/Bug-Tracker",
-		"/E/Coding/Bug-Tracker/Schema"
-	],
 	"file_history":
 	[
-		"/E/Coding/Bug-Tracker/bug-tracker.sublime-project",
+		"/E/Coding/Bug-Tracker/data.js",
 		"/E/Coding/Bug-Tracker/index.html",
-		"/E/Coding/Bug-Tracker/Report.html",
+		"/E/Coding/Bug-Tracker/public/css/style.css",
+		"/E/Coding/Bug-Tracker/views/navbar.ejs",
+		"/E/Coding/Bug-Tracker/Schema/schema.sql",
+		"/E/Coding/Bug-Tracker/Schema/data.sql",
+		"/E/LTI/Coding/Bootcamp Project/Project.sql",
 		"/E/Coding/Bug-Tracker/.gitignore",
+		"/E/Coding/Bug-Tracker/bug-tracker.sublime-project",
+		"/E/Coding/Bug-Tracker/data.json",
+		"/E/Coding/Bug-Tracker/Schema/Triggers.sql",
+		"/E/Coding/Bug-Tracker/Schema/my_data.sql",
+		"/E/Coding/Bug-Tracker/views/footer.ejs",
+		"/E/Coding/Bug-Tracker/views/header.ejs",
+		"/E/Coding/Bug-Tracker/style.css",
+		"/E/Coding/Bug-Tracker/Report.html",
 		"/E/Coding/Bug-Tracker/README.md",
 		"/E/Coding/WebDevelopment/MiniWebProjects/index.html",
 		"/E/Coding/Web Development/MiniWebProjects/Tindog/inde.html",
@@ -401,6 +429,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Error",
+			"express",
+			"Opened",
+			"sql_invoicing",
+			"tickets",
+			"dashboardData",
+			"Oct",
+			"Opened",
+			"Tickets",
+			"':,\n",
+			"express",
 			"type1",
 			"navbarTogglerDemo02",
 			"27",
@@ -428,25 +467,24 @@
 			[
 				{
 					"buffer": 0,
-					"file": "Schema/schema.sql",
+					"file": "app.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1094,
+						"buffer_size": 784,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1094,
-								1094
+								369,
+								369
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/SQL/SQL.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -457,27 +495,28 @@
 				},
 				{
 					"buffer": 1,
-					"file": ".gitignore",
+					"file": "Schema/schema.sql",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1666,
+						"buffer_size": 2948,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								32,
-								32
+								2947,
+								2947
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Git Formats/Git Ignore.sublime-syntax"
+							"syntax": "Packages/SQL/SQL.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.x": 78.0,
+						"translation.y": 1800.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -491,59 +530,24 @@
 			[
 				{
 					"buffer": 2,
-					"file": "index.html",
+					"file": "views/dashboardAdmin.ejs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3258,
+						"buffer_size": 1084,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1040,
-								973
+								1084,
+								1084
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 660.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 3,
-					"file": "style.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 287,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								287,
-								287
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax"
+							"syntax": "Packages/EJS 2/EJS.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -578,19 +582,12 @@
 				0,
 				2,
 				1
-			],
-			[
-				2,
-				0,
-				3,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.322072474433,
-			0.718528673197,
+			0.771010387158,
 			1.0
 		],
 		"rows":

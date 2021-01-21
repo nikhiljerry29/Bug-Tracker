@@ -106,3 +106,5 @@ dist
 # sublime workspace
 bug-tracker.sublime-workspace
 bug-tracker.sublime-project
+
+sqlConnection.js
