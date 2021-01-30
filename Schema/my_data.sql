@@ -1,3 +1,27 @@
+
+INSERT INTO Employee VALUES('A1', '', '');
+INSERT INTO Employee VALUES('A2', '', '');
+
+
+INSERT INTO Employee VALUES('M1','', 'A1');
+INSERT INTO Employee VALUES('M2','', 'A1');
+INSERT INTO Employee VALUES('M3','', 'A1');
+
+/* EMPLOYEE TABLE*/
+INSERT INTO Employee VALUES('T1', 'M1', 'A1');
+INSERT INTO Employee VALUES('T2', 'M1', 'A1');
+INSERT INTO Employee VALUES('T3', 'M2', 'A1');
+INSERT INTO Employee VALUES('T4', 'M2', 'A1');
+INSERT INTO Employee VALUES('T5', 'M3', 'A1');
+
+
+INSERT INTO Employee VALUES('D1', 'M1', 'A1');
+INSERT INTO Employee VALUES('D2', 'M1', 'A1');
+INSERT INTO Employee VALUES('D3', 'M2', 'A1');
+INSERT INTO Employee VALUES('D4', 'M2', 'A1');
+INSERT INTO Employee VALUES('D5', 'M3', 'A1');
+
+/* EMPLOYEE ROLE*/
 INSERT INTO Employee_Role VALUES('A1', 'admin');
 INSERT INTO Employee_Role VALUES('A2', 'admin');
 
@@ -17,7 +41,7 @@ INSERT INTO Employee_Role VALUES('D3', 'developer');
 INSERT INTO Employee_Role VALUES('D4', 'developer');
 INSERT INTO Employee_Role VALUES('D5', 'developer');
 
-
+/*PEROSNAL DATA*/
 INSERT INTO Employee_Personal_Details VALUES('A1', 'Ankit', 'Dedhia', 'dedhiaankit18@gmail.com');
 INSERT INTO Employee_Personal_Details VALUES('A2', 'Nikhil', 'Gupta', 'nikhil.gupta5667@gmail.com');
 
@@ -37,8 +61,13 @@ INSERT INTO Employee_Personal_Details VALUES('D3', 'Rohan', 'Rajput', 'rohanrajp
 INSERT INTO Employee_Personal_Details VALUES('D4', 'Prety', 'Prakash', 'pretyprakash@gmail.com');
 INSERT INTO Employee_Personal_Details VALUES('D5', 'Gajraj', 'Singh', 'gajrajsingh@gmail.com');
 
-INSERT INTO Bugs VALUES ('1', 'High', 'Functional', 'Open', '2021-01-01', null);
 
+/*BUGS*/
+INSERT INTO Bugs VALUES ('1', 'High', 'Functional', 'Open', '2021-01-01', null);
+INSERT INTO Bugs VALUES ('2', 'Low', 'UI-based', 'Open', '2021-01-02', null);
+
+
+/*Products*/
 INSERT INTO Products VALUES ('Prod1', 'Bug Tracker', 'This is a Test Project', 'M1', 'D1', 'T1', '1');
 
 

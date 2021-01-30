@@ -4,96 +4,12 @@
 		"selected_items":
 		[
 			[
-				"CLOSED",
-				"closed_on"
+				"sum",
+				"sumTwoNumbers\tabc"
 			],
 			[
-				"OPENED",
-				"opened_on"
-			],
-			[
-				"dahs",
-				"dashboardData\t(data.js)"
-			],
-			[
-				"opene",
-				"openedDate\t(app.js)"
-			],
-			[
-				"da",
-				"dashboardData\tabc"
-			],
-			[
-				"dashbo",
-				"dashboardData\t(data.js)"
-			],
-			[
-				"bod",
-				"bodyParser\tabc"
-			],
-			[
-				"td",
-				"td>@fat</td\tabc"
-			],
-			[
-				"a",
-				"a\tEmmet"
-			],
-			[
-				"backgr",
-				"background-color\tproperty"
-			],
-			[
-				"paddin",
-				"padding-top\tproperty"
-			],
-			[
-				"align",
-				"text-align\tproperty"
-			],
-			[
-				"div",
-				"div\tEmmet"
-			],
-			[
-				"bol",
-				"bolder\tfont-weight"
-			],
-			[
-				"back",
-				"background-color\tproperty"
-			],
-			[
-				"colo",
-				"background-color\tproperty"
-			],
-			[
-				"bac",
-				"background-color\tproperty"
-			],
-			[
-				"html",
-				"html\thtml"
-			],
-			[
-				"footer",
-				"footer\tEmmet"
-			],
-			[
-				"li",
-				"li\tEmmet"
-			],
-			[
-				"player",
-				"playerTwoDiceValue\tabc"
-			],
-			[
-				"images",
-				"images/dice6.png"
-			],
-			[
-				"im",
-				"images/dice6.png"
+				"prin",
+				"print\tprint"
 			],
 			[
 				"if",
@@ -160,32 +76,63 @@
 	"buffers":
 	[
 		{
-			"contents": "const express = require(\"express\");\nconst bodyParser = require(\"body-parser\");\n\nconst app = express();\nlet data = require(__dirname + \"/data\");\n\nconst mysql = require(\"mysql\");\nlet connection = mysql.createConnection({\n\thost: 'localhost',\n\tuser: 'root',\n\tpassword: '',\n\tdatabase: 'bugtracker'\n})\n\nconnection.connect(function(error){\n\tif(!!error)\n\t\tconsole.log(\"Error\");\n\telse\n\t\tconsole.log(\"Connected\");\n\n})\n\napp.set(\"view engine\", \"ejs\");\n\napp.use(bodyParser.urlencoded({extended: true}));\napp.use(express.static(\"public\"));\n\napp.get(\"/\", function(req, res){\n\tres.render(\"dashboardAdmin\", {\n\t\tdashboardAdminData : data.dashboardData\n\t});\n});\n\nconst port = 8080;\napp.listen(port, function() {\n\tconsole.log('Server started on port :: ' + port);\n\tconsole.log('localhost:' + port);\n});\n\n",
-			"file": "app.js",
-			"file_size": 821,
-			"file_write_time": 132557179022613538,
+			"file": "Schema/Triggers.sql",
 			"settings":
 			{
-				"buffer_size": 784,
-				"line_ending": "Windows"
+				"buffer_size": 1466,
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "Schema/schema.sql",
 			"settings":
 			{
-				"buffer_size": 2948,
+				"buffer_size": 1438,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "views/dashboardAdmin.ejs",
+			"file": "Schema/my_data.sql",
 			"settings":
 			{
-				"buffer_size": 1084,
+				"buffer_size": 3237,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/app.js",
+			"settings":
+			{
+				"buffer_size": 863,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Schema/testingSchema.sql",
+			"settings":
+			{
+				"buffer_size": 503,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/views/dashboardAdmin.ejs",
+			"settings":
+			{
+				"buffer_size": 1111,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 683,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -206,6 +153,22 @@
 			[
 				"Packages/C++/C++ Single File.sublime-build",
 				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/Java/Ant.sublime-build",
+					""
+				],
+				[
+					"Packages/Java/JavaC.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Java/JavaC.sublime-build",
+				""
 			]
 		],
 		[
@@ -233,48 +196,24 @@
 		"selected_items":
 		[
 			[
-				"colo",
-				"UI: Select Color Scheme"
-			],
-			[
 				"insta",
 				"Package Control: Install Package"
-			],
-			[
-				"color",
-				"UI: Select Color Scheme"
-			],
-			[
-				"them",
-				"UI: Select Theme"
-			],
-			[
-				"list pa",
-				"Package Control: List Packages"
-			],
-			[
-				"insat",
-				"Package Control: Install Package"
-			],
-			[
-				"remove",
-				"Package Control: Remove Package"
-			],
-			[
-				"emmet",
-				"Emmet: Decrement Number by 0.1"
-			],
-			[
-				"pac",
-				"Package Control: Remove Repository"
 			],
 			[
 				"package",
 				"Package Control: List Packages"
 			],
 			[
+				"color",
+				"UI: Select Color Scheme"
+			],
+			[
 				"install",
 				"Package Control: Install Package"
+			],
+			[
+				"colo",
+				"UI: Select Color Scheme"
 			],
 			[
 				"packag",
@@ -332,7 +271,6 @@
 		"height": 204.0,
 		"history":
 		[
-			"stop",
 			"ls"
 		]
 	},
@@ -345,40 +283,35 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/E/Coding/Bug-Tracker",
+		"/E/Coding/Bug-Tracker/Schema",
+		"/E/Coding/Bug-Tracker/src"
+	],
 	"file_history":
 	[
-		"/E/Coding/Bug-Tracker/data.js",
-		"/E/Coding/Bug-Tracker/index.html",
-		"/E/Coding/Bug-Tracker/public/css/style.css",
-		"/E/Coding/Bug-Tracker/views/navbar.ejs",
-		"/E/Coding/Bug-Tracker/Schema/schema.sql",
-		"/E/Coding/Bug-Tracker/Schema/data.sql",
-		"/E/LTI/Coding/Bootcamp Project/Project.sql",
-		"/E/Coding/Bug-Tracker/.gitignore",
-		"/E/Coding/Bug-Tracker/bug-tracker.sublime-project",
-		"/E/Coding/Bug-Tracker/data.json",
-		"/E/Coding/Bug-Tracker/Schema/Triggers.sql",
-		"/E/Coding/Bug-Tracker/Schema/my_data.sql",
-		"/E/Coding/Bug-Tracker/views/footer.ejs",
-		"/E/Coding/Bug-Tracker/views/header.ejs",
-		"/E/Coding/Bug-Tracker/style.css",
-		"/E/Coding/Bug-Tracker/Report.html",
-		"/E/Coding/Bug-Tracker/README.md",
-		"/E/Coding/WebDevelopment/MiniWebProjects/index.html",
-		"/E/Coding/Web Development/MiniWebProjects/Tindog/inde.html",
-		"/E/Coding/Web Development/MiniWebProjects/Bootstrap/index.html",
-		"/E/Coding/Web Development/MiniWebProjects/index.html",
-		"/E/Coding/Web Development/MiniWebProjects/Dice-Game/index.js",
-		"/E/Coding/Web Development/MiniWebProjects/Dice-Game/dicee.html",
-		"/E/Coding/Web Development/Dice-Game/index.js",
-		"/E/Coding/Web Development/Dice-Game/dicee.html",
-		"/E/Coding/Web Development/Dice-Game/styles.css",
-		"/E/Coding/Webiste Full/DOM/Dice Challenge/index.js",
-		"/E/Coding/Web Development/Dice-Game/README.md",
+		"/E/Coding/Bug-Tracker/src/app.js",
+		"/E/Coding/Bug-Tracker/package-lock.json",
+		"/E/Coding/Selenium/testing/src/main/java/myPackage/DriverClass.java",
+		"/E/Coding/Database/MongoDB/CrashCourse.JSON",
+		"/E/Coding/Database/MongoDB/CrashCourse.BSON",
+		"/E/Coding/WebDevelopment/To-DoApp/.gitignore",
+		"/E/Coding/100DaysOfCode-Python/Day1/variables.py",
+		"/E/Coding/100DaysOfCode-Python/Day8/caesarCipher.py",
+		"/E/Coding/100DaysOfCode-Python/Day2/billSplitAndTipCalculator.py",
+		"/E/Coding/100DaysOfCode-Python/Day1/bandNameGenerator.py",
+		"/E/Coding/100DaysOfCode-Python/.gitignore",
+		"/E/Coding/100DaysOfCode-Python/Day7/Hangman/hangmanArt.py",
+		"/E/Coding/100DaysOfCode-Python/Day7/Hangman/hangmanWordData.py",
+		"/E/Coding/100DaysOfCode-Python/Day7/Hangman/hangman.py",
+		"/E/Coding/100DaysOfCode-Python/Day7/Hangman/clearWindow.py",
+		"/E/Coding/100DaysOfCode-Python/Day7/hangman.py",
+		"/E/Coding/100DaysOfCode-Python/Day6/simpleSumFunction.py",
+		"/E/Coding/100DaysOfCode-Python/Day5/passwordGenerator.py",
 		"/E/Coding/100DaysOfCode-Python/Day5/addingEvenNumbers.py",
 		"/E/Coding/100DaysOfCode-Python/Day5/highestScoreInClass.py",
 		"/E/Coding/100DaysOfCode-Python/Day5/averageHeightOfStudents.py",
-		"/E/Coding/100DaysOfCode-Python/Day2/billSplitAndTipCalculator.py",
 		"/E/Coding/100DaysOfCode-Python/Day4/rockPaperScissor.py",
 		"/E/Coding/100DaysOfCode-Python/Day4/whosPaying.py",
 		"/E/Coding/100DaysOfCode-Python/Day4/headsOrTails.py",
@@ -390,10 +323,7 @@
 		"/E/Coding/100DaysOfCode-Python/Day2/bmi.py",
 		"/E/Coding/100DaysOfCode-Python/Day2/sumOfDigitsInTwoDigitNumber.py",
 		"/E/Coding/100DaysOfCode-Python/Day1/printingAndInput.py",
-		"/E/Coding/100DaysOfCode-Python/Day1/bandNameGenerator.py",
-		"/E/Coding/100DaysOfCode-Python/Day1/variables.py",
 		"/E/Coding/100DaysOfCode-Python/Day1/day1.py",
-		"/E/Coding/100DaysOfCode-Python/.gitignore",
 		"/C/Users/Nikhil/Desktop/cplusplus/tasks.todo",
 		"/C/Users/Nikhil/Desktop/cplusplus/set.cpp",
 		"/C/Users/Nikhil/Desktop/cplusplus/vector.cpp",
@@ -429,22 +359,6 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"Error",
-			"express",
-			"Opened",
-			"sql_invoicing",
-			"tickets",
-			"dashboardData",
-			"Oct",
-			"Opened",
-			"Tickets",
-			"':,\n",
-			"express",
-			"type1",
-			"navbarTogglerDemo02",
-			"27",
-			"Mark",
-			"mdo"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -459,27 +373,120 @@
 		"whole_word": false,
 		"wrap": true
 	},
+	"folders":
+	[
+		{
+			"path": "E:\\Coding\\Bug-Tracker"
+		}
+	],
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app.js",
+					"file": "Schema/Triggers.sql",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 784,
+						"buffer_size": 1466,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								369,
-								369
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SQL/SQL.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 300.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Schema/schema.sql",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1438,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								87,
+								87
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SQL/SQL.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Schema/my_data.sql",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3237,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								832,
+								832
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SQL/SQL.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 863,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								446,
+								446
 							]
 						],
 						"settings":
@@ -490,70 +497,100 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "Schema/schema.sql",
+					"buffer": 4,
+					"file": "Schema/testingSchema.sql",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2948,
+						"buffer_size": 503,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2947,
-								2947
+								503,
+								503
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/SQL/SQL.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 78.0,
-						"translation.y": 1800.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 2,
-					"file": "views/dashboardAdmin.ejs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1084,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1084,
-								1084
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/EJS 2/EJS.sublime-syntax"
+							"syntax": "Packages/SQL/SQL.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 5,
+					"file": "src/views/dashboardAdmin.ejs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1111,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1111,
+								1111
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/EJS 2/EJS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 683,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								683,
+								683
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/zzz A File Icon zzz/aliases/JSON (NPM).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
@@ -587,7 +624,7 @@
 		"cols":
 		[
 			0.0,
-			0.771010387158,
+			0.619180633147,
 			1.0
 		],
 		"rows":
@@ -599,14 +636,14 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 249.0
+		"height": 139.0
 	},
 	"output.find_results":
 	{
 		"height": 0.0
 	},
 	"pinned_build_system": "",
-	"project": "bug-tracker.sublime-project",
+	"project": "",
 	"replace":
 	{
 		"height": 62.0
@@ -647,10 +684,9 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 205.0,
+	"side_bar_width": 190.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
-		"max_columns": 3
 	}
 }

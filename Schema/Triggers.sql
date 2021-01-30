@@ -10,14 +10,47 @@ CREATE TABLE Bug_Log_Table(
     log_status VARCHAR(10),
     PRIMARY KEY(id)
 );
+DELIMITER //
+CREATE TRIGGER tr_forDelete AFTER DELETE ON Bugs 
+	FOR EACH ROW 
+		BEGIN
+			SET @dt = NOW();
+			INSERT INTO bug_log_table VALUES(0,
+									OLD.tickets,
+									OLD.priority,
+                                    OLD.bug_type,
+                                    OLD.status,
+                                    OLD.opened_on,
+                                    OLD.closed_on,
+                                    @dt, 
+                                    'DELETED');
+		END//
+DELIMITER ;
 
-/*FOR TESTING DELETE TRIGGERS*/
+/*For testing DELETE TRIGGER*/
 /*DELETE FROM Bugs 
 	WHERE tickets = '2';
 */
 
+DELIMITER //
+CREATE TRIGGER tr_forUpdate AFTER UPDATE ON Bugs 
+	FOR EACH ROW 
+		BEGIN
+			SET @dt = NOW();
+			INSERT INTO bug_log_table VALUES(0,
+									OLD.tickets,
+									OLD.priority,
+                                    OLD.bug_type,
+                                    OLD.status,
+                                    OLD.opened_on,
+                                    OLD.closed_on,
+                                    @dt, 
+                                    'UPDATED');
+		END//
+DELIMITER ;
 
-/*
-UPDATE Bugs SET priority = 'Medium' 
-	WHERE tickets = '2';
+
+/*For testing UPDATE TRIGGER*/
+/*UPDATE Bugs SET status = 'Closed' 
+	WHERE tickets = '1';
 */

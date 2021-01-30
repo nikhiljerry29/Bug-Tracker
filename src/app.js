@@ -21,8 +21,6 @@ connection.query('SELECT * FROM PRODUCT_LOG', function (error, results, fields) 
 	data = results;
 });
 
-connection.end();
-
 app.set("view engine", "ejs");
 
 app.get("/", function(req, res){
