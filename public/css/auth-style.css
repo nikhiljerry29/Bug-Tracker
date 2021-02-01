@@ -1,0 +1,47 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.main-section {
+	height: auto;
+	color: #4d375d;
+	padding: 2rem 2rem 2rem;
+	margin-top: 2rem;
+	max-width: 597px;
+}
+
+.image {
+	color: black;
+}
+
+.main-heading {
+	font-family: 'Hachi Maru Pop', cursive;
+	font-size: 3.5rem;
+	font-weight: bold;
+	padding: 2rem 0;
+}
+
+.form-group {
+	margin: 2rem 0;
+}
+
+.btn {
+	color: white;
+	background-color: #eb596e;
+}
+
+.form-control:focus {
+	border-color: #ffe227;
+	box-shadow: inset 0 1px 1px #ffe227, 0 1px 1px #ffe227;
+}
+
+#footer {
+	margin-top : 100px;
+	text-align: center;
+	color: #222831;
+}
+
+.social-icon {
+	margin: 20px 7px;
+	color: black;
+}

@@ -21,6 +21,10 @@ app.get("/home", (req, res) => {
 	res.render("home");
 })
 
+app.get("/login", (req, res) => {
+	res.render("authentication/login");
+})
+
 app.get("/dashboard", (req, res) => {
 	connection.query('SELECT * FROM PRODUCT_LOGS', function (error, results, fields) {
 		if (error) throw error;

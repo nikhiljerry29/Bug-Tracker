@@ -87,6 +87,41 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "views/authentication/login.ejs",
+			"settings":
+			{
+				"buffer_size": 949,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "views/home.ejs",
+			"settings":
+			{
+				"buffer_size": 403,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app.js",
+			"settings":
+			{
+				"buffer_size": 935,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "views/partials/header.ejs",
+			"settings":
+			{
+				"buffer_size": 1370,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -237,13 +272,21 @@
 	},
 	"expanded_folders":
 	[
-		"/E/Coding/Bug-Tracker"
+		"/E/Coding/Bug-Tracker",
+		"/E/Coding/Bug-Tracker/public",
+		"/E/Coding/Bug-Tracker/public/css",
+		"/E/Coding/Bug-Tracker/views",
+		"/E/Coding/Bug-Tracker/views/authentication"
 	],
 	"file_history":
 	[
+		"/E/Coding/Bug-Tracker/public/css/auth-style.css",
+		"/E/Coding/Bug-Tracker/views/dashboardAdmin.ejs",
+		"/E/Coding/Bug-Tracker/views/home.ejs",
+		"/E/Coding/Bug-Tracker/app.js",
+		"/E/Coding/Bug-Tracker/views/partials/navbar.ejs",
 		"/E/Coding/Bug-Tracker/src/app.js",
 		"/E/Coding/Bug-Tracker/src/.env",
-		"/E/Coding/Bug-Tracker/app.js",
 		"/E/Coding/Bug-Tracker/src/views/partials/header.ejs",
 		"/E/Coding/Bug-Tracker/src/views/partials/footer.ejs",
 		"/E/Coding/Bug-Tracker/src/public/css/style.css",
@@ -325,6 +368,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"\n})",
+			"\n\t",
 			"secret",
 			"var",
 			"User",
@@ -359,8 +404,125 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "views/authentication/login.ejs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 949,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								469,
+								469
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/EJS 2/EJS.sublime-syntax",
+							"translate_tabs_to_spaces": false,
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "views/home.ejs",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 403,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								354,
+								71
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/EJS 2/EJS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 935,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								480,
+								480
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 60.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "views/partials/header.ejs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1370,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								336,
+								336
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/EJS 2/EJS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -445,7 +607,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 143.0,
+	"side_bar_width": 185.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
