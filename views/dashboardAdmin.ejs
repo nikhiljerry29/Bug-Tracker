@@ -1,0 +1,59 @@
+<%- include("partials/header") -%>
+<%- include("partials/navbar") -%>
+
+<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+	<ul class="navbar-nav ml-auto">
+		<li class="nav-item">
+			<a class="nav-link" href="">Dashboard</a>
+		</li>
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<i class="fas fa-user-circle fa-1x"></i> Hello! <%= username %>
+			</a>
+			<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+				<a class="dropdown-item" href="#">My Profile</a>
+				<a class="dropdown-item" href="#">Notification</a>
+				<a class="dropdown-item" href="#">Sign Out</a>
+			</div>
+		</li>
+	</ul>
+</div>
+</nav>
+
+</section>
+
+<section id="Dashboard">
+
+	<div class="container content">
+		<div class="table-responsive-md">
+			<table class="table table-striped table-hover">
+				<caption>Click on the tickets for more details.</caption>
+				<thead class="thead-dark">
+					<tr>
+						<th scope="col">Tickets</th>
+						<th scope="col">Status</th>
+						<th scope="col">Project ID</th>
+						<th scope="col">Priority</th>
+						<th scope="col">Opened ON</th>
+						<th scope="col">Closed ON</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% for (var i = 0; i < dashboardAdminData.length; i++) { %>
+					<tr>
+						<th scope="row"><%= dashboardAdminData[i]["tickets"] %></th>
+						<td><%= dashboardAdminData[i]["status"] %></td>
+						<td><%= dashboardAdminData[i]["project_id"] %></td>
+						<td><%= dashboardAdminData[i]["priority"] %></td>
+						<td><%= date(dashboardAdminData[i]["opened_on"]) %></td>
+						<td><%= date(dashboardAdminData[i]["closed_on"]) %></td>
+					</tr>
+					<% } %>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+</section>
+
+<%- include("partials/footer") -%>

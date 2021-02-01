@@ -1,4 +1,4 @@
-module.exports.getDate = function (currentDate) {
+module.exports = function (currentDate) {
 
 	const today = new Date(currentDate);
 
