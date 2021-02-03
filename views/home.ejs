@@ -1,19 +1,15 @@
-<%- include("partials/header") -%>
-<%- include("partials/navbar") -%>
-
-<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-	<ul class="navbar-nav ml-auto">
-		<li class="nav-item">
-			<a class="nav-link" href="/dashboard">Dashboard</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="/login">Login</a>
-		</li>
-	</ul>
-</div>
-</nav>
-
+<section id="homePage">
+	<div class="container main-section">
+		<div class="row">
+			<div class="col">
+				<div class="jumbotron jumbo-color">
+					<h1 class="display-4 main-heading">Hi,There!😄</h1>
+					<p class="lead">This is a simple bug tracking app with authentication (ENCRYPTION based MySQL database).</p>
+					<hr class="my-4">
+					<p>Below you can find the navigating buttons.</p>
+					<a class="btn btn-dark active" href="/users/login" role="button">Login</a>
+					<a class="btn btn-dark active" href="/users/register" role="button">Sign Up</a>
+				</div>
+			</div>
+		</div>
 </section>
-
-
-<%- include("partials/footer") -%>

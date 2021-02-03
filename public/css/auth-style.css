@@ -4,7 +4,7 @@ body {
 
 .main-section {
 	height: auto;
-	color: #4d375d;
+	color: #19456b;
 	padding: 2rem 2rem 2rem;
 	margin-top: 2rem;
 	max-width: 597px;
@@ -27,12 +27,12 @@ body {
 
 .btn {
 	color: white;
-	background-color: #eb596e;
+	background-color: #11698e;
 }
 
 .form-control:focus {
-	border-color: #ffe227;
-	box-shadow: inset 0 1px 1px #ffe227, 0 1px 1px #ffe227;
+	border-color: #16c79a;
+	box-shadow: inset 0 1px 1px #16c79a, 0 1px 1px #16c79a;
 }
 
 #footer {

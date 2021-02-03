@@ -1,42 +1,54 @@
 require('dotenv').config()
-const express = require("express")
-const app = express()
-const bodyParser = require("body-parser")
+const express = require('express')
+const expressLayouts = require('express-ejs-layouts')
+const mongoose = require('mongoose')
+const flash = require('connect-flash')
+const session = require('express-session')
 
+const passport = require('passport')
+require('./config/passport')(passport)
+
+// MySQL Conncetion
+const db = require('./config/database')
+db.authenticate()
+.then(() => console.log('Database Connected'))
+.catch(err => console.log('Error :: ' + err))
+
+// Express & View Engines
+const app = express()
+app.use(expressLayouts)
 app.set("view engine", "ejs")
-app.use(bodyParser.urlencoded({extended: true}))
+app.use(express.urlencoded({extended: true}))
 app.use(express.static("public"))
 
-const date = require("./exports/date.js")
+// Express Session
+app.use(session({
+  secret: process.env.SECRET,
+  resave: true,
+  saveUninitialized: true,
+}))
 
-const connection = require("./config/database")
+// passport middleware
+app.use(passport.initialize());
+app.use(passport.session());
 
-connection.connect();
+app.use(flash());
 
-app.get("/", (req, res) => {
-	res.redirect("/home")
+// Global Vars
+app.use((req, res, next) => {
+	res.locals.success_msg = req.flash('success_msg')
+	res.locals.error_msg = req.flash('error_msg')
+	res.locals.error = req.flash('error')
+	next()
 })
 
-app.get("/home", (req, res) => {
-	res.render("home");
-})
 
-app.get("/login", (req, res) => {
-	res.render("authentication/login");
-})
+// Routes
+app.use('/', require('./routes/index'))
+app.use('/users', require('./routes/users'))
 
-app.get("/dashboard", (req, res) => {
-	connection.query('SELECT * FROM PRODUCT_LOGS', function (error, results, fields) {
-		if (error) throw error;
-		res.render("dashboardAdmin", {
-			username : "Username",
-			dashboardAdminData : results,
-			date : date
-		})
-	})	
-})
 
-const port = process.env.PORT || 8080
-app.listen(port, function() {
-	console.log(`Server started on port :: ${port}`)
+const port = 8080
+app.listen(8080, () => {
+	console.log("Server Started on port :: " + port)
 })
