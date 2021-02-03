@@ -5,10 +5,19 @@ const bcrypt = require('bcryptjs')
 const passport = require('passport')
 
 router.get('/login', (req, res) => {
-	res.render("login")
+	if(req.isAuthenticated()){
+		req.flash('success_msg', `You are already logged In as ${req.user.email_address}!!`)
+		res.redirect("/dashboard")
+	}
+	else
+		res.render("login")
 })
 
 router.get('/register', (req, res) => {
+	if(req.isAuthenticated()){
+		req.logout()
+		req.flash('success_msg', `You are logged out from previous session`)
+	}
 	res.render('register')
 })
 
