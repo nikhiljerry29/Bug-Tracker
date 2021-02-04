@@ -24,12 +24,34 @@ CREATE TABLE bugtracker.product_logs (
 	PRIMARY KEY (id)
 );
 
-INSERT INTO product_logs VALUES('1','Opened','PR1','High', NULL, '2021-01-21', '2021-01-22');
-INSERT INTO product_logs VALUES('2','Closed','PR2','High','2020-11-27', '2020-10-27', '2020-11-27');
-INSERT INTO product_logs VALUES('3','Closed','PR3','Low','2021-01-12', '2020-10-08', '2021-01-12');
-INSERT INTO product_logs VALUES('5','Closed','PR12','Low',"2021-01-26", '2020-12-26', '2021-01-26');
-INSERT INTO product_logs VALUES('6','Closed','PR13','High', SYSDATE(), '2020-12-26', '2021-01-26');
+INSERT INTO bugtracker.product_logs VALUES('1','Opened','1','High', NULL, '2021-01-21', '2021-01-22');
+INSERT INTO bugtracker.product_logs VALUES('2','Closed','2','High','2020-11-27', '2020-10-27', '2020-11-27');
+INSERT INTO bugtracker.product_logs VALUES('3','Closed','3','Low','2021-01-12', '2020-10-08', '2021-01-12');
+INSERT INTO bugtracker.product_logs VALUES('5','Closed','12','Low',"2021-01-26", '2020-12-26', '2021-01-26');
+INSERT INTO bugtracker.product_logs VALUES('6','Closed','13','High', SYSDATE(), '2020-12-26', '2021-01-26');
+INSERT INTO bugtracker.product_logs (status, project_id, priority, closedOn, createdAt, updatedAt) VALUES('Closed','14','Low',"2021-02-02", '2021-02-01', '2021-02-02');
 
+CREATE TABLE bugtracker.projects (
+	id SERIAL,
+    project_name VARCHAR(20),
+    project_description VARCHAR(500),
+    manager_id INTEGER,
+    developer_id INTEGER,
+    tester_id INTEGER,
+    createdAt DATE,
+	updatedAt DATE,
+    PRIMARY KEY (id)
+);
+
+INSERT INTO bugtracker.projects VALUES('1','Cloud AWS','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut sodales orci. Vivamus nibh purus, aliquet eget sem et, consectetur malesuada dolor. Nam aliquam pharetra massa, vel dapibus mauris tincidunt et. Nulla eu interdum tellus. Fusce lobortis tortor eu tellus laoreet varius. Integer vitae ex ac felis pharetra tincidunt. Vestibulum in venenatis dui.', 2, 3, 4, SYSDATE(), SYSDATE());
+
+SELECT 
+	project_name, first_name as developer
+FROM 
+project, user_details
+where project.developer_id = user_details.id;
+
+TRUNCATE bugtracker.product_logs;
 -- DROP TABLE  CASCADE;
 
 -- Gig.update({ title : 'Looking for Android Developer' }, {

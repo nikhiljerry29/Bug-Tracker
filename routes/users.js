@@ -15,8 +15,8 @@ router.get('/login', (req, res) => {
 
 router.get('/register', (req, res) => {
 	if(req.isAuthenticated()){
-		req.logout()
 		req.flash('success_msg', `You are logged out from previous session`)
+		req.logout()
 	}
 	res.render('register')
 })

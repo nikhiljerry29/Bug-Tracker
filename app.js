@@ -47,6 +47,12 @@ app.use((req, res, next) => {
 app.use('/', require('./routes/index'))
 app.use('/users', require('./routes/users'))
 
+app.get('/test', (req, res) => {
+	res.render("dashboardProjects", {
+		username : "Username"
+	})
+})
+
 
 const port = 8080
 app.listen(8080, () => {
