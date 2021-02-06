@@ -4,27 +4,27 @@ const Projects = require('../models/Project')
 const _ = require("lodash");
 const User = require('../models/User')
 
-const everyUsersNameArray = ["Initial"]
-User.findAll({
-        attributes: ['id', 'first_name', 'last_name']
-    })
-    .then((foundUsers) => {
-        foundUsers.forEach(user => {
-            everyUsersNameArray.push(_.capitalize(user.first_name) +
-                " " +
-                _.capitalize(user.last_name))
-        })
-    })
 
 function dashboardDataAndDetails(viewPage, foundLogs, req, res) {
-    res.render(viewPage, {
-        dashboardProjectsData: foundLogs,
-        date: require("../exports/date"),
-        everyUsersName: everyUsersNameArray,
-        username: _.capitalize(req.user.first_name) +
-            " " +
-            _.capitalize(req.user.last_name)
-    })
+    User.findAll({
+            attributes: ['id', 'first_name', 'last_name']
+        })
+        .then((foundUsers) => {
+            const everyUsersNameArray = ["Initial"]
+            foundUsers.forEach(user => {
+                everyUsersNameArray.push(_.capitalize(user.first_name) +
+                    " " +
+                    _.capitalize(user.last_name))
+            })
+            res.render(viewPage, {
+                dashboardProjectsData: foundLogs,
+                date: require("../exports/date"),
+                everyUsersName: everyUsersNameArray,
+                username: _.capitalize(req.user.first_name) +
+                    " " +
+                    _.capitalize(req.user.last_name)
+            })
+        })
 }
 
 router.get('/', (req, res) => {

@@ -1,21 +1,31 @@
-const { Sequelize } = require('sequelize')
+const {
+	Sequelize
+} = require('sequelize')
 
 const db = require('../config/database')
 
 const ProductLog = db.define('product_logs', {
-	status : {
+	status: {
 		type: Sequelize.STRING,
 		required: true
 	},
-	project_id : {
+	project_id: {
 		type: Sequelize.STRING,
 		required: true
 	},
-	priority : {
+	issue_name: {
 		type: Sequelize.STRING,
 		required: true
 	},
-	closedOn : {
+	issue_description: {
+		type: Sequelize.STRING,
+		required: true
+	},
+	priority: {
+		type: Sequelize.STRING,
+		required: true
+	},
+	closedOn: {
 		type: Sequelize.DATE,
 		required: false
 	}

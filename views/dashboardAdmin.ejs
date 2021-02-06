@@ -24,9 +24,17 @@
 				<tbody>
 					<% dashboardAdminData.forEach(data => { %>
 					<tr>
-						<th scope="row">BG<%= data.id %></th>
+						<th scope="row">
+							<a href="/dashboard/BG/<%= data.id %>" class="id-link">
+								BG<%= data.id %>
+							</a>
+						</th>
 						<td><%= data.status %></td>
-						<td>PR<%= data.project_id %></td>
+						<td>
+							<a href="/dashboard/projects/PR<%= data.project_id %>" class="id-link">
+								PR<%= data.project_id %>
+							</a>
+						</td>
 						<td><%= data.priority %></td>
 						<td><%= date(data.createdAt) %></td>
 						<td><%= date(data.closedOn) %></td>

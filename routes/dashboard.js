@@ -1,8 +1,5 @@
 const express = require("express")
 const router = express.Router()
-const {
-	ensureAuthenticated
-} = require("../config/auth")
 const _ = require("lodash")
 const ProductLogs = require("../models/ProductLogs")
 
@@ -52,5 +49,6 @@ router.post("/search", (req, res) => {
 })
 
 router.use('/projects', require('./projects'))
+router.use('/BG', require('./issuesTickets'))
 
 module.exports = router

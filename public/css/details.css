@@ -20,3 +20,12 @@
     background-color: #00917c;
     text-decoration: none;
 }
+
+.id-link {
+    color: black;
+}
+
+.id-link:hover {
+    color: #00917c;
+    text-decoration: none;
+}

@@ -17,6 +17,8 @@ CREATE TABLE bugtracker.product_logs (
 	id SERIAL,
 	status VARCHAR(10),
 	project_id VARCHAR(10),
+    issue_name VARCHAR(100),
+    issue_description VARCHAR(1000),
 	priority VARCHAR(10),
 	closedOn DATE,
 	createdAt DATE,
@@ -24,17 +26,18 @@ CREATE TABLE bugtracker.product_logs (
 	PRIMARY KEY (id)
 );
 
-INSERT INTO bugtracker.product_logs VALUES('1','Opened','1','High', NULL, '2021-01-21', '2021-01-22');
-INSERT INTO bugtracker.product_logs VALUES('2','Closed','2','High','2020-11-27', '2020-10-27', '2020-11-27');
-INSERT INTO bugtracker.product_logs VALUES('3','Closed','3','Low','2021-01-12', '2020-10-08', '2021-01-12');
-INSERT INTO bugtracker.product_logs VALUES('5','Closed','12','Low',"2021-01-26", '2020-12-26', '2021-01-26');
-INSERT INTO bugtracker.product_logs VALUES('6','Closed','13','High', SYSDATE(), '2020-12-26', '2021-01-26');
-INSERT INTO bugtracker.product_logs (status, project_id, priority, closedOn, createdAt, updatedAt) VALUES('Closed','14','Low',"2021-02-02", '2021-02-01', '2021-02-02');
+INSERT INTO bugtracker.product_logs VALUES('1','Opened','1','Integration Failure', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut sodales orci. Vivamus nibh purus, aliquet eget sem et, consectetur malesuada dolor. Nam aliquam pharetra massa, vel dapibus mauris tincidunt et. Nulla eu interdum tellus. Fusce lobortis tortor eu tellus laoreet varius. Integer vitae ex ac felis pharetra tincidunt. Vestibulum in venenatis dui.','High', NULL, '2021-01-21', '2021-01-22');
+INSERT INTO bugtracker.product_logs VALUES('2','Closed','2','SQL Error Connection', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut sodales orci. Vivamus nibh purus, aliquet eget sem et, consectetur malesuada dolor. Nam aliquam pharetra massa, vel dapibus mauris tincidunt et. Nulla eu interdum tellus. Fusce lobortis tortor eu tellus laoreet varius. Integer vitae ex ac felis pharetra tincidunt. Vestibulum in venenatis dui.','High','2020-11-27', '2020-10-27', '2020-11-27');
+INSERT INTO bugtracker.product_logs VALUES('3','Closed','2','Variables Incorrect Order', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut sodales orci. Vivamus nibh purus, aliquet eget sem et, consectetur malesuada dolor. Nam aliquam pharetra massa, vel dapibus mauris tincidunt et. Nulla eu interdum tellus. Fusce lobortis tortor eu tellus laoreet varius. Integer vitae ex ac felis pharetra tincidunt. Vestibulum in venenatis dui.','Low','2021-01-12', '2020-10-08', '2021-01-12');
+INSERT INTO bugtracker.product_logs VALUES('5','Closed','1','Server Backup Problem', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut sodales orci. Vivamus nibh purus, aliquet eget sem et, consectetur malesuada dolor. Nam aliquam pharetra massa, vel dapibus mauris tincidunt et. Nulla eu interdum tellus. Fusce lobortis tortor eu tellus laoreet varius. Integer vitae ex ac felis pharetra tincidunt. Vestibulum in venenatis dui.','Low',"2021-01-26", '2020-12-26', '2021-01-26');
+INSERT INTO bugtracker.product_logs VALUES('6','Closed','1','API Key EXPiration', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut sodales orci. Vivamus nibh purus, aliquet eget sem et, consectetur malesuada dolor. Nam aliquam pharetra massa, vel dapibus mauris tincidunt et. Nulla eu interdum tellus. Fusce lobortis tortor eu tellus laoreet varius. Integer vitae ex ac felis pharetra tincidunt. Vestibulum in venenatis dui.','High', "2021-02-02", '2020-12-26', '2021-01-26');
+
+-- DROP TABLE bugtracker.product_logs cascade;
 
 CREATE TABLE bugtracker.projects (
 	id SERIAL,
-    project_name VARCHAR(20),
-    project_description VARCHAR(500),
+    project_name VARCHAR(200),
+    project_description VARCHAR(1000),
     manager_id INTEGER,
     developer_id INTEGER,
     tester_id INTEGER,
@@ -44,6 +47,7 @@ CREATE TABLE bugtracker.projects (
 );
 
 INSERT INTO bugtracker.projects VALUES('1','Cloud AWS','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut sodales orci. Vivamus nibh purus, aliquet eget sem et, consectetur malesuada dolor. Nam aliquam pharetra massa, vel dapibus mauris tincidunt et. Nulla eu interdum tellus. Fusce lobortis tortor eu tellus laoreet varius. Integer vitae ex ac felis pharetra tincidunt. Vestibulum in venenatis dui.', 2, 3, 4, SYSDATE(), SYSDATE());
+INSERT INTO bugtracker.projects VALUES('2','E-Commerce Backend Development','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut sodales orci. Vivamus nibh purus, aliquet eget sem et, consectetur malesuada dolor. Nam aliquam pharetra massa, vel dapibus mauris tincidunt et. Nulla eu interdum tellus. Fusce lobortis tortor eu tellus laoreet varius. Integer vitae ex ac felis pharetra tincidunt. Vestibulum in venenatis dui.', 2, 5, 6, SYSDATE(), SYSDATE());
 
 SELECT 
 	project_name, first_name as developer
