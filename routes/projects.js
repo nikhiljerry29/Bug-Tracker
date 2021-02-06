@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const Projects = require('../models/Project')
+const ProductLogs = require("../models/ProductLogs")
 const _ = require("lodash");
 const User = require('../models/User')
 
@@ -48,5 +49,23 @@ router.get("/PR:project_id", (req, res) => {
         .catch((err) => console.log(err));
 })
 
+router.get("/PR:project_id/all_issues", (req, res) => {
+    const project_id = req.params.project_id
+    ProductLogs.findAll({
+        where: {
+            project_id
+        }
+    })
+		.then((foundLogs) => {
+            res.render("dashboardAdmin", {
+                date: require("../exports/date"),
+                dashboardAdminData: foundLogs,
+                username: _.capitalize(req.user.first_name) +
+                    " " +
+                    _.capitalize(req.user.last_name),
+            })
+		})
+		.catch((err) => console.log(err))
+})
 
 module.exports = router
