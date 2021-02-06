@@ -48,9 +48,9 @@ INSERT INTO bugtracker.projects VALUES('1','Cloud AWS','Lorem ipsum dolor sit am
 SELECT 
 	project_name, first_name as developer
 FROM 
-project, user_details
-where project.developer_id = user_details.id;
-
+projects, user_details
+where projects.developer_id = user_details.id;
+rollback;
 TRUNCATE bugtracker.product_logs;
 -- DROP TABLE  CASCADE;
 

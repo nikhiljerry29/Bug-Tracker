@@ -107,3 +107,5 @@ dist
 bug-tracker.sublime-workspace
 bug-tracker.sublime-project
 
+# Vscode
+.vscode

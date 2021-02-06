@@ -14,5 +14,6 @@ router.get('/home', (req, res) => {
 })
 
 router.use('/dashboard', ensureAuthenticated, require('./dashboard'))
+// router.use('/dashboard', require('./dashboard'))
 
 module.exports = router

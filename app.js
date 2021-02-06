@@ -1,7 +1,6 @@
 require('dotenv').config()
 const express = require('express')
 const expressLayouts = require('express-ejs-layouts')
-const mongoose = require('mongoose')
 const flash = require('connect-flash')
 const session = require('express-session')
 
@@ -48,9 +47,9 @@ app.use('/', require('./routes/index'))
 app.use('/users', require('./routes/users'))
 
 app.get('/test', (req, res) => {
-	res.render("dashboardProjects", {
-		username : "Username"
-	})
+	// res.render("details", {
+	// 	username : "Username"
+	// })
 })
 
 

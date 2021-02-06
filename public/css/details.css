@@ -1,0 +1,22 @@
+.details-section {
+    color: black;
+    max-width: 650px;
+}
+
+.thead-success {
+    background-color: #00917c;
+    color: white;
+}
+
+.issue-button {
+    background-color: #f6f5f5;
+    border-radius: 5px;
+    color: black;
+    padding: 13px 15px;
+}
+
+.issue-button:hover {
+    color: white;
+    background-color: #00917c;
+    text-decoration: none;
+}

@@ -22,16 +22,16 @@
 					</tr>
 				</thead>
 				<tbody>
-					<% for (var i = 0; i < dashboardAdminData.length; i++) { %>
+					<% dashboardAdminData.forEach(data => { %>
 					<tr>
-						<th scope="row">BG<%= dashboardAdminData[i].id %></th>
-						<td><%= dashboardAdminData[i].status %></td>
-						<td>PR<%= dashboardAdminData[i].project_id %></td>
-						<td><%= dashboardAdminData[i].priority %></td>
-						<td><%= date(dashboardAdminData[i].createdAt) %></td>
-						<td><%= date(dashboardAdminData[i].closedOn) %></td>
+						<th scope="row">BG<%= data.id %></th>
+						<td><%= data.status %></td>
+						<td>PR<%= data.project_id %></td>
+						<td><%= data.priority %></td>
+						<td><%= date(data.createdAt) %></td>
+						<td><%= date(data.closedOn) %></td>
 					</tr>
-					<% } %>
+					<% }) %>
 				</tbody>
 			</table>
 		</div>

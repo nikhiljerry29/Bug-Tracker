@@ -1,0 +1,46 @@
+<%- include("partials/navbar") -%>
+
+<section id="Dashboard">
+    <div class="container content details-section">
+        <div class="table-responsive-md">
+            <%- include ("./partials/messages") -%>
+            <table class="table table-light table-hover table-striped">
+                <thead class="thead-success">
+                    <tr>
+                        <th scope="col">Project ID</th>
+                        <th>PR<%= dashboardProjectsData.id %> </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Project Name</th>
+                        <td><%= dashboardProjectsData.project_name %></td>
+                    </tr>
+                    <tr>
+                        <th>Description</th>
+                        <td>
+                            <p><%= dashboardProjectsData.project_description %></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Manager</th>
+                        <td><%= everyUsersName[dashboardProjectsData.manager_id] %></td>
+                    </tr>
+                    <tr>
+                        <th>Developer</th>
+                        <td><%= everyUsersName[dashboardProjectsData.developer_id] %></td>
+                    </tr>
+                    <tr>
+                        <th>Tester</th>
+                        <td><%= everyUsersName[dashboardProjectsData.tester_id] %></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <a href="" class="issue-button">Issue Tracker</a>
+            </div>
+        </div>
+    </div>
+</section>
