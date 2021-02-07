@@ -1,8 +1,12 @@
-<nav class="navbar navbar-light bg-none">
-	<div></div>
-	<form action="/dashboard/search" class="form-inline" method="POST">
-		<input class="form-control mr-sm-2 mx-auto order-0" type="search" placeholder="Search any ID here." name="ticketSearchId" aria-label="Search" autocomplete="off">
-		<button class="btn btn-outline-success my-2 my-sm-0 active" type="submit"><i class="fas fa-search"></i></button>
-	</form>
-	<div></div>
-</nav>
+<div class="container search-bar">
+
+	<nav class="navbar navbar-light bg-none">
+		<div>
+			<a href="/dashboard/BG/create-new" class="issue-button">Create New Issue</a>
+		</div>
+		<form action="/dashboard/search" class="form-inline" method="POST">
+			<input class="form-control ml-auto" type="search" placeholder="Search any ID here." name="ticketSearchId" aria-label="Search" autocomplete="off">
+			<button class="btn btn-outline-success my-2 my-sm-0 active" type="submit"><i class="fas fa-search"></i></button>
+		</form>
+	</nav>
+</div>

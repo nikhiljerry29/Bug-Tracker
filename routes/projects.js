@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const Projects = require('../models/Project')
 const ProductLogs = require("../models/ProductLogs")
-const _ = require("lodash");
+const username = require("../exports/username")
 const User = require('../models/User')
 const dashboardData = require("../exports/dashboardDataDisplay")
 
@@ -13,17 +13,13 @@ function dashboardDataAndDetails(viewPage, foundLogs, req, res) {
         .then((foundUsers) => {
             const everyUsersNameArray = ["Initial"]
             foundUsers.forEach(user => {
-                everyUsersNameArray.push(_.capitalize(user.first_name) +
-                    " " +
-                    _.capitalize(user.last_name))
+                everyUsersNameArray.push(username(user))
             })
             res.render(viewPage, {
                 dashboardProjectsData: foundLogs,
                 date: require("../exports/date"),
                 everyUsersName: everyUsersNameArray,
-                username: _.capitalize(req.user.first_name) +
-                    " " +
-                    _.capitalize(req.user.last_name)
+                username: username(req.user)
             })
         })
 }

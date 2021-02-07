@@ -27,6 +27,15 @@ body {
 	margin: 0 5px;
 }
 
-#Dashboard {
-	padding: 2%
+#Dashboard, .search-bar {
+	padding: 12px;
+}
+
+#new-issue-creaion-page {
+	color: black;
+	margin: 50px auto;
+}
+
+.new-issue-form {
+	margin: 0 auto;
 }
