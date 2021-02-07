@@ -1,7 +1,7 @@
 <%- include("partials/navbar") -%>
 
 <section id="Dashboard">
-    <div class="container content details-section">
+    <div class="container details-section">
         <div class="table-responsive-md">
             <%- include ("./partials/messages") -%>
             <table class="table table-light table-hover table-striped">
@@ -20,8 +20,8 @@
                         <th>Project ID</th>
                         <td>
                             <a href="/dashboard/projects/PR<%= issueDetails.project_id %>" class="id-link">
-								PR<%= issueDetails.project_id %>
-							</a>
+                                PR<%= issueDetails.project_id %>
+                            </a>
                         </td>
                     </tr>
                     <tr>
@@ -30,10 +30,12 @@
                     </tr>
                     <tr>
                         <th>Description</th>
-                        <td><p><%= issueDetails.issue_description %></p></td>
+                        <td>
+                            <p><%= issueDetails.issue_description %></p>
+                        </td>
                     </tr>
                     <tr>
-                        <th>priority</th>
+                        <th>Priority</th>
                         <td><%= issueDetails.priority %></td>
                     </tr>
                     <tr>
@@ -44,10 +46,12 @@
                         <th>Last Updated On</th>
                         <td><%= date(issueDetails.updatedAt) %></td>
                     </tr>
+                    <% if (issueDetails.status === 'Closed') { %>
                     <tr>
                         <th>Closed On</th>
                         <td><%= date(issueDetails.closedOn) %></td>
                     </tr>
+                    <% } %>
                 </tbody>
             </table>
         </div>

@@ -23,6 +23,10 @@ body {
 	margin-left: auto; 
 }
 
+.navbar-nav {
+	margin: 0 5px;
+}
+
 #Dashboard {
 	padding: 2%
 }

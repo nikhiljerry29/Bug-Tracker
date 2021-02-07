@@ -1,17 +1,7 @@
 const express = require("express")
 const router = express.Router()
-const _ = require("lodash")
 const ProductLogs = require("../models/ProductLogs")
-
-function dashboardData(foundLogs, req, res) {
-	res.render("dashboardAdmin", {
-		date: require("../exports/date"),
-		dashboardAdminData: foundLogs,
-		username: _.capitalize(req.user.first_name) +
-			" " +
-			_.capitalize(req.user.last_name),
-	})
-}
+const dashboardData = require("../exports/dashboardDataDisplay")
 
 router.get("/", (req, res) => {
 	ProductLogs.findAll()
@@ -26,13 +16,18 @@ router.get("/search", (req, res) => {
 })
 
 router.post("/search", (req, res) => {
-	if (req.body.ticketSearchId === "") {
+	const ticketID = req.body.ticketSearchId.toUpperCase()
+	const idCharValue = ticketID.substring(0, 2)
+	const id = Number(ticketID.substring(2, ticketID.length))
+
+	if (ticketID === "" || (idCharValue !== 'PR' && idCharValue !== 'BG')) {
 		req.flash("error_msg", "Please Enter Valid Ticket ID.")
 		res.redirect("/dashboard")
 	}
 
-	const ticketID = req.body.ticketSearchId.toUpperCase()
-	const id = Number(ticketID.substring(2, ticketID.length))
+	if (idCharValue === 'PR')
+		res.redirect(`/dashboard/projects/PR${id}/all_issues`)
+
 	ProductLogs.findAll({
 			where: {
 				id

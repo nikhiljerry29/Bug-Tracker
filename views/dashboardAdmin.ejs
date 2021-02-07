@@ -2,18 +2,19 @@
 <%- include("partials/searchbar") -%>
 
 <section id="Dashboard">
-	<div class="container content">
+	<div class="container">
 		<div class="table-responsive-md">
 			<%- include ("./partials/messages") -%>
 			<table class="table table-striped table-hover">
 				<% if (dashboardAdminData.length === 0) { %>
-				<caption>Table is empty. Click on add new issue!</caption>
+				<caption>Project doesn't have issues! Till Now 😂</caption>
 				<% } else { %>
 				<caption>Click on the tickets for more details.</caption>
 				<% } %>
 				<thead class="thead-dark">
 					<tr>
-						<th scope="col">Tickets</th>
+						<th scope="col align-text-top">Tickets</th>
+						<th scope="col">Name</th>
 						<th scope="col">Status</th>
 						<th scope="col">Project ID</th>
 						<th scope="col">Priority</th>
@@ -29,6 +30,7 @@
 								BG<%= data.id %>
 							</a>
 						</th>
+						<td><%= data.issue_name %></td>
 						<td><%= data.status %></td>
 						<td>
 							<a href="/dashboard/projects/PR<%= data.project_id %>" class="id-link">
