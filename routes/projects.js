@@ -45,34 +45,37 @@ router.get("/PR:project_id", (req, res) => {
         .catch((err) => console.log(err));
 })
 
-function isProjectIdPresent (id) {
-    return Projects.count({ where: { id } })
-      .then(count => {
-        if (count != 0) {
-          return false;
-        }
-        return true;
-    });
+function isProjectIdPresent(id) {
+    return Projects.count({
+            where: {
+                id
+            }
+        })
+        .then(count => {
+            if (count != 0) {
+                return false;
+            }
+            return true;
+        });
 }
 
 router.get("/PR:project_id/all_issues", (req, res) => {
     const project_id = req.params.project_id
     ProductLogs.findAll({
-        where: {
-            project_id
-        }
-    })
-		.then((foundLogs) => {
+            where: {
+                project_id
+            }
+        })
+        .then((foundLogs) => {
             if (foundLogs.length === 0) {
-                if (isProjectIdPresent(project_id)) {
+                if (isProjectIdPresent(project_id))
                     dashboardData(foundLogs, req, res)
-                }
-				req.flash("error_msg", "No such Project ID is present.")
-				res.redirect("/dashboard")
-			}
+                req.flash("error_msg", "No such Project ID is present.")
+                res.redirect("/dashboard")
+            }
             dashboardData(foundLogs, req, res)
-		})
-		.catch((err) => console.log(err))
+        })
+        .catch((err) => console.log(err))
 })
 
 module.exports = router

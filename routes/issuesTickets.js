@@ -1,6 +1,7 @@
 const express = require("express")
 const router = express.Router()
 const ProductLogs = require("../models/ProductLogs")
+const Project = require("../models/Project")
 const username = require("../exports/username")
 
 function issueTicketData(foundLogs, req, res) {
@@ -15,9 +16,12 @@ router.get("/", (req, res) => {
 })
 
 router.get("/create-new", (req, res) => {
-	res.render("newIssuePage", {
-		username: username(req.user)
-	})
+	Project.findAll()
+		.then(foundLogs => res.render("newIssuePage", {
+				username: username(req.user),
+				projects: foundLogs
+			}))
+		.catch(err => console.log(err))
 })
 
 router.post("/create-new", (req, res) => {

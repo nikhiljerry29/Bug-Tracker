@@ -5,16 +5,16 @@
         <form action="/dashboard/BG/create-new" method="POST">
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="inputIssueName">Issue Name</label>
-                    <input type="text" class="form-control" id="inputIssueName" name="issue_name" placeholder="E.g. Integeration Error, Table View Error." required>
+                    <label for="inputProjectName">Project Name</label>
+                    <input type="text" class="form-control" id="inputProjectName" name="project_name" placeholder="E.g. Integeration Error, Table View Ratio Error." required>
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputProjectId">Project ID</label>
-                    <select id="inputProjectId" class="form-control" name="project_id" searchable="Search here..">
+                    <select id="inputProjectId" class="form-control" name="project_id">
                         <option selected disabled>Choose...</option>
-                        <% projects.forEach(project => { %>
-                        <option value="<%= project.id %>">PR<%= project.id %> | <span><%= project.project_name %></span></option>
-                        <% }) %>
+                        <option>High</option>
+                        <option>Medium</option>
+                        <option>Low</option>
                     </select>
                 </div>
                 <div class="form-group col-md-3">
@@ -28,11 +28,11 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="inputIssueDescription">Description</label>
-                <textarea class="form-control" id="inputIssueDescription" name="issue_description" required></textarea>
+                <label for="inputprojectDescription">Description</label>
+                <textarea class="form-control" id="inputprojectDescription" name="project_description" required></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary">Submit Issue</button>
+            <button type="submit" class="btn btn-primary">Submit project</button>
         </form>
     </div>
 </section>

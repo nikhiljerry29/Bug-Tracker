@@ -47,7 +47,7 @@ app.use('/', require('./routes/index'))
 app.use('/users', require('./routes/users'))
 
 app.get('/test', (req, res) => {
-	res.render("newIssuePage", {
+	res.render("newProjectPage", {
 		username : "Username"
 	})
 })
