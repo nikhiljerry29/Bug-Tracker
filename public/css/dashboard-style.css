@@ -3,7 +3,6 @@ body {
 	color: #f8f1f1;
 }
 
-/*Navigation Bar*/
 #navigation-bar {
 	background-color: #11698e;
 }
@@ -36,6 +35,6 @@ body {
 	margin: 50px auto;
 }
 
-.new-issue-form {
-	margin: 0 auto;
+.custom-form {
+	max-width: 950px;
 }

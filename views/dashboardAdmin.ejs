@@ -39,7 +39,11 @@
 						</td>
 						<td><%= data.priority %></td>
 						<td><%= date(data.createdAt) %></td>
+						<% if (date(data.closedOn) === "Jan 1, 1970") { %>
+							<td>-</td>
+						<% } else { %>
 						<td><%= date(data.closedOn) %></td>
+						<% } %> 
 					</tr>
 					<% }) %>
 				</tbody>

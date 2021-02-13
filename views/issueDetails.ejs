@@ -57,7 +57,22 @@
         </div>
         <div class="row">
             <div class="col-md-12">
+                <% if (isStatusUpdated) { %>
+                <form action="/dashboard/BG/<%= issueDetails.id %>" method="POST">
+                    <label for="inputStatus">Change Status</label>
+                    <select type="submit" id="inputStatus" class="form-control" name="status">
+                        <option selected>Opened</option>
+                        <option>In Progress</option>
+                        <option>Closed</option>
+                    </select>
+                    <br>
+                    <button class="btn btn-light active" type="submit">Save</button>
+                </form>
+                <% } else {%>
                 <a href="/dashboard" class="issue-button">Back to All Issues</a>
+                <a href="/dashboard/BG/update<%= issueDetails.id %>" class="issue-button">Change Status</a>
+                <% } %>
+
             </div>
         </div>
     </div>

@@ -4,7 +4,12 @@ const ProductLogs = require("../models/ProductLogs")
 const dashboardData = require("../exports/dashboardDataDisplay")
 
 router.get("/", (req, res) => {
-	ProductLogs.findAll()
+	ProductLogs.findAll({
+			order: [
+				['status', 'DESC'],
+				['createdAt', 'DESC']
+			]
+		})
 		.then((foundLogs) => {
 			dashboardData(foundLogs, req, res)
 		})

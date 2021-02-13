@@ -15,7 +15,7 @@ CREATE TABLE bugtracker.user_details (
 
 CREATE TABLE bugtracker.product_logs (
 	id SERIAL,
-	status VARCHAR(10),
+	status VARCHAR(10) NULL DEFAULT 'Opened',
 	project_id VARCHAR(10),
     issue_name VARCHAR(100),
     issue_description VARCHAR(1000),
@@ -25,8 +25,7 @@ CREATE TABLE bugtracker.product_logs (
 	updatedAt DATE,
 	PRIMARY KEY (id)
 );
-ALTER TABLE `bugtracker`.`product_logs` 
-CHANGE COLUMN `status` `status` VARCHAR(10) NULL DEFAULT 'Opened' ;
+
 
 INSERT INTO bugtracker.product_logs VALUES('1','Opened','1','Integration Failure', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut sodales orci. Vivamus nibh purus, aliquet eget sem et, consectetur malesuada dolor. Nam aliquam pharetra massa, vel dapibus mauris tincidunt et. Nulla eu interdum tellus. Fusce lobortis tortor eu tellus laoreet varius. Integer vitae ex ac felis pharetra tincidunt. Vestibulum in venenatis dui.','High', NULL, '2021-01-21', '2021-01-22');
 INSERT INTO bugtracker.product_logs VALUES('2','Closed','2','SQL Error Connection', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut sodales orci. Vivamus nibh purus, aliquet eget sem et, consectetur malesuada dolor. Nam aliquam pharetra massa, vel dapibus mauris tincidunt et. Nulla eu interdum tellus. Fusce lobortis tortor eu tellus laoreet varius. Integer vitae ex ac felis pharetra tincidunt. Vestibulum in venenatis dui.','High','2020-11-27', '2020-10-27', '2020-11-27');
